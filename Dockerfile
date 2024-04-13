@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM arm32v7/node
 WORKDIR /server-app
 COPY . .
 RUN corepack enable
