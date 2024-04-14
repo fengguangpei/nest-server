@@ -3,6 +3,6 @@ WORKDIR /server-app
 COPY . .
 RUN corepack enable
 RUN npm i -g pm2
-RUN npm install
-RUN npm run build
+RUN pnpm install
+RUN pnpm run build
 CMD ["pm2-runtime", "start", "ecosystem.json"]
