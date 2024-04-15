@@ -1,1 +1,0 @@
-{"version":3,"file":"libsql.config.js","sourceRoot":"","sources":["../src/libsql.config.ts"],"names":[],"mappings":";;AAAA,yBAAuB;AACvB,6CAA2C;AAE3C,kBAAe,IAAA,0BAAY,EAAC;IAC1B,MAAM,EAAE,wBAAwB;IAChC,GAAG,EAAE,eAAe;IACpB,MAAM,EAAE,OAAO;IACf,aAAa,EAAE;QACb,GAAG,EAAE,OAAO,CAAC,GAAG,CAAC,oBAAoB;QACrC,SAAS,EAAE,OAAO,CAAC,GAAG,CAAC,gBAAgB;KACxC;CACF,CAAC,CAAC"}
