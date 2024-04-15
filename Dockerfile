@@ -1,4 +1,4 @@
-FROM arm32v7/node
+FROM arm64v21/node
 WORKDIR /server-app
 COPY . .
 RUN corepack enable
