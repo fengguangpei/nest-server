@@ -19,12 +19,13 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "generate": "drizzle-kit generate:\"$0\" --config=\"$0\".config.ts",
-    "push": "drizzle-kit push:\"$0\" --config=\"$0\".config.ts",
+    "push": "drizzle-kit push:\"$0\" --config=./src/\"$0\".config.ts",
     "introspect": "drizzle-kit introspect:\"$0\" --config=\"$0\".config.ts",
     "studio": "drizzle-kit studio --config=\"$0\".config.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.3.3",
+    "@libsql/linux-arm64-gnu": "^0.3.12",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
