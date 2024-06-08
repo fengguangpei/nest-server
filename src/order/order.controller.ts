@@ -6,7 +6,13 @@ export class OrderController {
   constructor(private readonly orderService: OrderService) {}
 
   @Get('/list')
-  orderList() {
-    return this.orderService.orderLists();
+  async orderList() {
+    const list = this.orderService.orderLists();
+    await new Promise((res) => {
+      setTimeout(() => {
+        res(true);
+      }, 3000);
+    });
+    return list;
   }
 }
