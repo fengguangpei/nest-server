@@ -7,6 +7,6 @@ import { libsqlInstance } from 'src/libsql/libsql';
 import { mysqlInstance } from 'src/mysql/mysql';
 @Injectable()
 export class DbService {
-  // readonly mysql: MySql2Database<typeof mysqlSchema> = mysqlInstance;
+  readonly mysql: MySql2Database<typeof mysqlSchema> = mysqlInstance;
   readonly libsql: LibSQLDatabase<typeof libsqlSchema> = libsqlInstance;
 }
