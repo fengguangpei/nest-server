@@ -19,34 +19,34 @@ import { CatModule } from './cat/cat.module';
 @Module({
   imports: [
     DbModule,
-    UserModule,
+    // UserModule,
     PostModule,
     OrderModule,
-    ProductModule,
+    // ProductModule,
     // MongooseModule.forRoot('mongodb://localhost/test'),
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), './src/schema.gql'),
-      playground: false,
-      include: [ProductModule],
-      subscriptions: {
-        'graphql-ws': true,
-      },
-      buildSchemaOptions: {
-        dateScalarMode: 'timestamp',
-      },
-      resolvers: {
-        UUID: CustomUuidScalar,
-      },
-      // typePaths: ['./**/*.graphql'],
-      // definitions: {
-      //   path: join(process.cwd(), './src/graphql.ts'),
-      //   outputAs: 'class',
-      // },
-      plugins: [ApolloServerPluginLandingPageLocalDefault()],
-    }),
-    WebsocketModule,
-    CatModule,
+    // GraphQLModule.forRoot<ApolloDriverConfig>({
+    //   driver: ApolloDriver,
+    //   autoSchemaFile: join(process.cwd(), './src/schema.gql'),
+    //   playground: false,
+    //   include: [ProductModule],
+    //   subscriptions: {
+    //     'graphql-ws': true,
+    //   },
+    //   buildSchemaOptions: {
+    //     dateScalarMode: 'timestamp',
+    //   },
+    //   resolvers: {
+    //     UUID: CustomUuidScalar,
+    //   },
+    //   // typePaths: ['./**/*.graphql'],
+    //   // definitions: {
+    //   //   path: join(process.cwd(), './src/graphql.ts'),
+    //   //   outputAs: 'class',
+    //   // },
+    //   plugins: [ApolloServerPluginLandingPageLocalDefault()],
+    // }),
+    // WebsocketModule,
+    // CatModule,
   ],
   controllers: [AppController],
   providers: [AppService, DbService],
