@@ -1,4 +1,4 @@
-FROM node:latest
+FROM swr.cn-south-1.myhuaweicloud.com/fenggp/node:latest
 WORKDIR /server-app
 COPY . .
 RUN npm install pm2 -g
