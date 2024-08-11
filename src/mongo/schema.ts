@@ -1,4 +1,4 @@
-import { Schema, connect } from 'mongoose';
+import { Schema } from 'mongoose';
 
 export const blogSchema = new Schema({
   title: String,
@@ -12,3 +12,5 @@ export const blogSchema = new Schema({
     favs: Number,
   },
 });
+
+export type Blog = typeof blogSchema;

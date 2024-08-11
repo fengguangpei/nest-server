@@ -1,0 +1,50 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Product {
+  id: ID!
+  supplierId: UUID!
+  name: String!
+  unitPrice: Float!
+  unitsInStock: Int!
+  date: Timestamp!
+}
+
+"""A simple UUID parser"""
+scalar UUID
+
+"""
+`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
+"""
+scalar Timestamp
+
+type Query {
+  products: [Product!]!
+  product(id: Int!): Product!
+}
+
+type Mutation {
+  createProduct(createProductInput: CreateProductInput!): Product!
+  updateProduct(updateProductInput: UpdateProductInput!): Product!
+  removeProduct(id: Int!): Product!
+}
+
+input CreateProductInput {
+  name: String!
+  unitPrice: Float!
+  unitsInStock: Int!
+  supplierId: ID!
+}
+
+input UpdateProductInput {
+  name: String
+  unitPrice: Float
+  unitsInStock: Int
+  supplierId: ID
+  id: ID!
+}
+
+type Subscription {
+  productCreated: Product!
+}
