@@ -7,12 +7,7 @@ import { OrderModule } from './order/order.module';
 import { DbModule } from './db/db.module';
 import { DbService } from './db/db.service';
 @Module({
-  imports: [
-    DbModule,
-    UserModule,
-    PostModule,
-    OrderModule
-  ],
+  imports: [DbModule, UserModule, PostModule, OrderModule],
   controllers: [AppController],
   providers: [AppService, DbService],
 })
