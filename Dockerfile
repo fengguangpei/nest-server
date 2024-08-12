@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 swr.cn-south-1.myhuaweicloud.com/fenggp/node:latest
+FROM node:11.1.0-slim
 WORKDIR /server-app
 COPY . .
 # RUN npm install -g pm2
