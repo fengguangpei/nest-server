@@ -1,4 +1,4 @@
-FROM node:11.1.0-slim
+FROM swr.cn-south-1.myhuaweicloud.com/fenggp/node:latest
 WORKDIR /server-app
 COPY . .
 # RUN npm install -g pm2
@@ -6,4 +6,4 @@ COPY . .
 # RUN pnpm install
 # RUN pnpm run build
 # CMD ["pm2-runtime", "start", "ecosystem.json"]
-RUN "npm install -g pnpm"
+RUN npm -v
