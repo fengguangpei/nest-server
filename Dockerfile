@@ -6,4 +6,4 @@ COPY . .
 # RUN pnpm install
 # RUN pnpm run build
 # CMD ["pm2-runtime", "start", "ecosystem.json"]
-RUN command
+RUN "npm install -g pnpm"
